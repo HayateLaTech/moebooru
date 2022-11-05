@@ -184,6 +184,7 @@ Rails.application.routes.draw do
   match "static/more", :via => [:post, :get]
   match "static/terms_of_service", :via => [:post, :get]
   match "/opensearch" => "static#opensearch", :via => [:post, :get]
+  match "/tos" => 'static#terms_of_service', :via => [:post, :get]
 
   # TagAlias
   match "tag_alias" => "tag_alias#index", :via => [:post, :get]
