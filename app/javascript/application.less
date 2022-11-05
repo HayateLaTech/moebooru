@@ -303,7 +303,7 @@ span.post-count {
 a.thumb {
   display: block;
   text-align: center;
-  vertical-align: middle;
+  // vertical-align: middle;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -1331,7 +1331,7 @@ ul#post-list-posts .inner {
 
 ul#post-list-posts li {
   list-style-type: none;
-  float: left;
+  // float: left;
   margin: 0 0 10px 0;
   display: inline-block;
   vertical-align: bottom;
@@ -1538,6 +1538,7 @@ img.service-icon#source {
   height: 100px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 .vote-popup-container {
@@ -1547,6 +1548,7 @@ img.service-icon#source {
   vertical-align: top;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 .vote-popup-container .star {
@@ -1568,15 +1570,18 @@ img.service-icon#source {
  * affect layout. */
 .vote-popup-container .star-set {
   -webkit-transform: scale(1.35);
+  transform: scale(1.35);
 }
 .vote-popup-container .vote-up-block { display: none; }
 .vote-popup-container .vote-up-block-anonymous { display: none; }
 
 .vote-popup-container .star {
   -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
 }
 .vote-popup-container.vote-popup-hidden .star {
   -webkit-transform: scale(0.000001); /* WebKit hates scale(0) */
+  transform: scale(0);
 }
 
 .vote-popup-flash {
@@ -1592,7 +1597,9 @@ img.service-icon#source {
 
 .vote-popup-flash.flash-star .flash-item {
   -webkit-transition: all 0.75s cubic-bezier(0.0, 0.3, 0.5, 1);
+  transition: all 0.75s cubic-bezier(0.0, 0.3, 0.5, 1);
   -webkit-transform: translateY(0px) scale(2.0);
+  transform: translateY(0px) scale(2.0);
   opacity: 0;
 }
 
@@ -1618,6 +1625,7 @@ img.service-icon#source {
 
   /* Prevent the image from being selected when double-clicking the container to
    * toggle fullscreen. */
+   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
@@ -1638,11 +1646,13 @@ img.service-icon#source {
   /* Prevent thumbs from being selected when double-clicking the thumb container. */
   -webkit-user-select: none;
   -moz-user-select: none;
+  user-select: none;
 }
 
 .disable-selection {
   -webkit-user-select: none;
   -moz-user-select: none;
+  user-select: none;
 }
 
 .post-browser-scroller {
@@ -2081,6 +2091,7 @@ P,.inline-image + .inline-image > .inline-thumb
   background-color: #008;
 
   -webkit-transition: top 0.2s ease-out;
+  transition: top 0.2s ease-out;
   top: -8em;
 }
 
