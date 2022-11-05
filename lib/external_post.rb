@@ -15,7 +15,7 @@ class ExternalPost
           "#{service}.ico"
         end
 
-      if filename.present?
+      if filename.present? && File.exists?(filename)
         ApplicationController.helpers.image_url "favicons/#{filename}"
       else
         "/favicon.ico"
